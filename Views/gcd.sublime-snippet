@@ -1,0 +1,11 @@
+<!-- See http://www.sublimetext.com/docs/snippets for more information -->
+<snippet>
+    <content><![CDATA[
+def get_context_data(self, **kwargs):
+    context = super(${1:VIEWNAME}, self).get_context_data(**kwargs)
+    ${2:}
+    return context]]></content>
+    <tabTrigger>gcd</tabTrigger>
+    <scope>source.python</scope>
+    <description>get_context_data</description>
+</snippet>
