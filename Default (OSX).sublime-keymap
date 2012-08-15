@@ -1,0 +1,14 @@
+[
+    {
+        "keys": ["super+alt+j"],
+        "command": "reformat_args",
+        "context":
+            [
+                {
+                    "key": "selector",
+                    "operator": "equal",
+                    "operand": "source.python"
+                }
+            ]
+    }
+]
