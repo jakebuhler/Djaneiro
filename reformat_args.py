@@ -28,6 +28,10 @@ class ReformatArgsCommand(sublime_plugin.TextCommand):
         for sel in self.view.sel():
             self.view.replace(edit, sel, self._reformat_args(sel))
 
+    def is_enabled(self):
+        point = self.view.sel()[0].begin()
+        return 'source.python' in self.view.scope_name(point)
+
     def _reformat_args(self, sel):
         bracket_stack = TokenStack({'(': ')', '{': '}', '[': ']'})
         string_stack = TokenStack({'"': '"', "'": "'"})
